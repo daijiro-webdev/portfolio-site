@@ -1,30 +1,21 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import SideMenu from "./components/SideMenu.vue";
+import Hero from "./components/Hero.vue";
+import About from "./components/About.vue";
+import Skills from "./components/Skills.vue";
+import Works from "./components/Works.vue"; // ←追加
+import Footer from "./components/Footer.vue";
 </script>
 
 <template>
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+    <div class="flex h-screen bg-background text-gray-800">
+        <SideMenu />
+        <main class="flex-1 overflow-y-auto p-6 space-y-20">
+            <Hero />
+            <About />
+            <Skills />
+            <Works />
+            <Footer />
+        </main>
+    </div>
 </template>
-
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
